@@ -1,0 +1,18 @@
+body 
+{
+  font-family: "Times New Roman", Times, serif;
+}
+
+canvas
+{
+  border: 1px solid black;
+}
+
+#mainDiv
+{
+  width: 65%;
+  margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 7em;
+  padding: 3em;
+}
