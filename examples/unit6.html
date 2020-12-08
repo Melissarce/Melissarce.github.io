@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melissa Arce Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<html>
+<body>
+	
+		<div class="wrapper">
+    <div class="sidebar">
+       
+        <ul>
+            <li><a href="../index.html" class="center">Home</a></li>
+            <li><a href="unit5.html" class="center">Unit 5</a></li>
+            <li><a href="unit6.html" class="center">Unit 6</a></li>
+            <li><a href="unit7.html" class="center">Unit 7</a></li>
+            <li><a href="unit8.html" class="center">Unit 8</a></li>
+            <li><a href="unit9.html" class="center">Unit 9</a></li>
+            <li><a href="unit10.html" class="center">Unit 10</a></li>
+        </ul> 
+    </div>
+		
+	<div class="main_content">
+        <div class="header"><h1>Unit 6 assignments</h1></div>  
+        <div class="info">
+			<div class="center">
+    		<h2>Select a City:</h2>
+
+<form action="AreaCodes.html" method="post" name="theForm"
+
+      onsubmit="checkTheCode(); return false;">
+
+  <select name="theCode" id="CODE">
+
+    <option value="">-- Select a City --</option>
+    <option value="617">Mexico</option>
+    <option value="212">California</option>
+    <option value="415">Alaska</option>
+    <option value="813">Germany</option>
+
+  </select>
+  <br/>
+  <br/>
+  
+
+  <input type="submit" value="Check the Area Code" />
+<br/>
+  <br/>
+</form>
+				<h2>Number Checker</h2>
+
+<form method="post" name="theForm" onsubmit="checkTheNumber(); return false;"> Enter a number: <input type="text" id="theNumber"/>
+  <br/>
+  <br/>
+  <input type="submit" value="Check the Number"/>
+</form>
+			</div>
+		</div>
+		
+      </div>
+    
+	</div>
+		<!-- Second part of assignment-->
+	<script>
+	 function checkTheCode()
+    {
+      var msg = "";
+      var areaCode = document.getElementById("CODE").options[document.getElementById("CODE").selectedIndex].value;
+		
+      switch (parseInt(areaCode))
+      {
+        case 617:
+          msg = "Mexico's area code is " + areaCode;
+    		break;
+        case 212:
+          msg = "California's area code is " + areaCode;
+    		break;
+        case 415:
+          msg = "Alaska's area code is " + areaCode;
+    		break;
+        case 813:
+          msg = "Germany's area code is " + areaCode;
+			break;
+		default:
+          msg = "You did not select a city.";
+      }
+      
+      alert(msg);
+
+    }
+	</script>
+	<!-- First part of assignment-->
+	<script>
+	    function checkTheNumber()
+    {
+      var num = document.getElementById("theNumber").value;
+      var msg = "";
+      
+      if (num >= 100)
+
+        msg = msg + "The number is greater than 100";
+		else 
+			msg = msg + "The number is less than 100";
+
+      alert(msg);
+    }
+
+	</script>
+</body>
